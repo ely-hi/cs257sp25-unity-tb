@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerShooting : MonoBehaviour
 {
@@ -14,13 +15,19 @@ public class PlayerShooting : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    
+    void OnFire(InputValue value)
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0)) {
+        if (value.isPressed) {
             GameObject clone = Instantiate(prefab);
+
             clone.transform.position = shootPoint.transform.position;
             clone.transform.rotation = shootPoint.transform.rotation;
         }
+    }
+     // Update is called once per frame
+    void Update()
+    {
+
     }
 }
