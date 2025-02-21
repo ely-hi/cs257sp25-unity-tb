@@ -14,11 +14,16 @@ public class PlayerMovementScript : MonoBehaviour
 
     private Vector2 movementValue;
     private float lookValue;
+
+    private Rigidbody rb;
+
     // Start is called before the first frame update
     private void Awake()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+
+        rb = GetComponent<Rigidbody>();
     }
 
     public void OnMove(InputValue value) {
@@ -55,11 +60,18 @@ public class PlayerMovementScript : MonoBehaviour
         // float mouseX = Input.GetAxis("Mouse X");
         // transform.Rotate(0, mouseX * rotationSpeed * Time.deltaTime, 0);
 
-        transform.Translate(
-            movementValue.x * Time.deltaTime, 
-            0,
-            movementValue.y * Time.deltaTime);
+        // transform.Translate(
+        //     movementValue.x * Time.deltaTime, 
+        //     0,
+        //     movementValue.y * Time.deltaTime);
 
-        transform.Rotate(0, lookValue * Time.deltaTime, 0);
+        // transform.Rotate(0, lookValue * Time.deltaTime, 0);
+
+        rb.AddRelativeForce(
+           movementValue.x * Time.deltaTime, 
+             0,
+             movementValue.y * Time.deltaTime);
+        
+        rb.AddRelativeTorque(0, lookValue * Time.deltaTime, 0);
     }
 }

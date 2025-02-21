@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1758273838264565348}
   - component: {fileID: 8104822395923255136}
   - component: {fileID: 706154769678513990}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 169389050672633651}
   - component: {fileID: 8694823125445326639}
   - component: {fileID: 991749853729046264}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,7 +227,8 @@ GameObject:
   - component: {fileID: 4864024558591019027}
   - component: {fileID: 6862796582912782825}
   - component: {fileID: 481843168460787380}
-  m_Layer: 0
+  - component: {fileID: -2987768234783411223}
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,6 +354,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-2987768234783411223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7522758413412483049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea64a5870a692a6438cac2164fcbe054, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amount: 100
 --- !u!1 &7702137007966927122
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,7 +376,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2352544620480073626}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: New Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}

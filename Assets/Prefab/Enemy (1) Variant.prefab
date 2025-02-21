@@ -8,9 +8,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2987768234783411223, guid: b466a874dc307a54faeb389233909cc6, type: 3}
+      propertyPath: amount
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939491100592485334, guid: b466a874dc307a54faeb389233909cc6, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994591162830504659, guid: b466a874dc307a54faeb389233909cc6, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7522758413412483049, guid: b466a874dc307a54faeb389233909cc6, type: 3}
       propertyPath: m_Name
       value: Enemy (1) Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522758413412483049, guid: b466a874dc307a54faeb389233909cc6, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702137007966927122, guid: b466a874dc307a54faeb389233909cc6, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7818845888429025021, guid: b466a874dc307a54faeb389233909cc6, type: 3}
       propertyPath: m_LocalPosition.x
