@@ -16,6 +16,7 @@ public class EnemyFSM : MonoBehaviour
     public float lastShootTime;
     public GameObject bulletPrefab;
     public float fireRate;
+    public ParticleSystem muzzleEffect;
 
 
     void GoToBase() {
@@ -103,6 +104,7 @@ public class EnemyFSM : MonoBehaviour
         if (timeSinceLastShoot > fireRate) {
             lastShootTime = Time.time;
             Instantiate(bulletPrefab, transform.position, transform.rotation);
+            muzzleEffect.Play();
         }
     }
 

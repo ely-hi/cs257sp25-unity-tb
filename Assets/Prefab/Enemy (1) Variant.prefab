@@ -71,6 +71,9 @@ MonoBehaviour:
   baseTransform: {fileID: 0}
   baseAttackDistance: 2
   playerAttackDistance: 3
+  lastShootTime: 0
+  bulletPrefab: {fileID: 0}
+  fireRate: 0
 --- !u!1001 &4568936015792263754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -162,6 +165,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7522758413412483049, guid: b466a874dc307a54faeb389233909cc6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8466067317429408432}
+    - targetCorrespondingSourceObject: {fileID: 7522758413412483049, guid: b466a874dc307a54faeb389233909cc6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8770991332673529628}
   m_SourcePrefab: {fileID: 100100000, guid: b466a874dc307a54faeb389233909cc6, type: 3}
 --- !u!4 &6046647586639361207 stripped
 Transform:
@@ -233,3 +239,16 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &-8770991332673529628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6272999650098245027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44068cf541db0e14ab93063424d0aab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particlePrefab: {fileID: 3657851425040370289, guid: 156c7af72eec1a84198946f0e445d9fc, type: 3}
