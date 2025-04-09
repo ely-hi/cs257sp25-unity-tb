@@ -10,6 +10,7 @@ public class PlayerShooting : MonoBehaviour
     public GameObject prefab;
     public GameObject shootPoint;
     public ParticleSystem muzzleEffect;
+    public AudioSource shootSound;
     // Start is called before the first frame update
    
     void OnFire(InputValue value)
@@ -21,6 +22,7 @@ public class PlayerShooting : MonoBehaviour
             clone.transform.rotation = shootPoint.transform.rotation;
 
             muzzleEffect.Play();
+            shootSound.Play();
         }
     }
 

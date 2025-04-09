@@ -17,6 +17,7 @@ public class EnemyFSM : MonoBehaviour
     public GameObject bulletPrefab;
     public float fireRate;
     public ParticleSystem muzzleEffect;
+    public AudioSource shootSound;
 
 
     void GoToBase() {
@@ -105,6 +106,7 @@ public class EnemyFSM : MonoBehaviour
             lastShootTime = Time.time;
             Instantiate(bulletPrefab, transform.position, transform.rotation);
             muzzleEffect.Play();
+            shootSound.Play();
         }
     }
 
