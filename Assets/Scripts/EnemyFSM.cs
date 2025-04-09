@@ -18,6 +18,7 @@ public class EnemyFSM : MonoBehaviour
     public float fireRate;
     public ParticleSystem muzzleEffect;
     public AudioSource shootSound;
+    Animator animator;
 
 
     void GoToBase() {
@@ -30,6 +31,7 @@ public class EnemyFSM : MonoBehaviour
         // if (distanceToBase < baseAttackDistance) {
         //     currentState = EnemeyState.AttackBase;
         // }
+        animator.SetBool("Shooting", false);
         agent.isStopped = false;
         agent.SetDestination(baseTransform.position);
     }
@@ -54,6 +56,7 @@ public class EnemyFSM : MonoBehaviour
         // if (distanceToPlayer <= playerAttackDistance) {
         //     currentState = EnemeyState.AttackPlayer;
         // }
+        animator.SetBool("Shooting", false);
 
         agent.isStopped = false;
 
@@ -98,9 +101,11 @@ public class EnemyFSM : MonoBehaviour
     {
         baseTransform = GameObject.Find("BaseDamagePoint").transform;
         agent = GetComponentInParent<NavMeshAgent>();
+        animator = GetComponentInParent<Animator>();
     }
 
     void Shoot() {
+        animator.SetBool("Shooting", true);
         var timeSinceLastShoot = Time.time - lastShootTime;
         if (timeSinceLastShoot > fireRate) {
         //&& timeSinceLastShoot.timeScale > 0) {
