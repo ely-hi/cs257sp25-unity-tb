@@ -11,11 +11,15 @@ public class PlayerShooting : MonoBehaviour
     public GameObject shootPoint;
     public ParticleSystem muzzleEffect;
     public AudioSource shootSound;
+    public int bulletsAmount;
     // Start is called before the first frame update
    
     void OnFire(InputValue value)
     {
-        if (value.isPressed) {
+        if (value.isPressed && bulletsAmount > 0 && Time.timeScale > 0) {
+
+            bulletsAmount--;
+            
             GameObject clone = Instantiate(prefab);
 
             clone.transform.position = shootPoint.transform.position;
